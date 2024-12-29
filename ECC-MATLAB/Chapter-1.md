@@ -17,8 +17,48 @@ OUTPUT: RSA public key (n,e) and private key d.
 ```
 
 
+```
+% rsa_encrypt.m
+% Implements RSA encryption.
+function c = rsa_encrypt(m, n, e)
+    % Input: m (plaintext), n (modulus), e (public exponent)
+    % Output: c (ciphertext)
+    c = mod(m^e, n);
+end
+```
+```
+% rsa_decrypt.m
+% Implements RSA decryption.
+function m = rsa_decrypt(c, n, d)
+    % Input: c (ciphertext), n (modulus), d (private exponent)
+    % Output: m (plaintext)
+    m = mod(c^d, n);
+end
+```
 
+```
+% rsa_sign.m
+% Implements RSA signature generation.
+function s = rsa_sign(m, n, d, H)
+    % Input: m (message), n (modulus), d (private exponent), H (hash function handle)
+    % Output: s (signature)
+    h = H(m); % Compute hash of the message
+    s = mod(h^d, n); % Compute signature
+end
+```
 
+```
+% rsa_verify.m
+% Implements RSA signature verification.
+function isValid = rsa_verify(m, s, n, e, H)
+    % Input: m (message), s (signature), n (modulus), e (public exponent), H (hash function handle)
+    % Output: isValid (boolean indicating if the signature is valid)
+    h = H(m); % Compute hash of the message
+    h_prime = mod(s^e, n); % Compute hash from signature
+    isValid = (h == h_prime); % Check if hashes match
+end
+
+```
 
 
 
