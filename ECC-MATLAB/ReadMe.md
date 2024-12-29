@@ -17,11 +17,11 @@ Contributions
 ---
 We welcome contributions to improve this repository. If you have suggestions or enhancements:
 
-Fork the repository.
+1. Fork the repository.
 
-Create a branch for your feature or fix.
+2. Create a branch for your feature or fix.
 
-Submit a pull request with detailed descriptions of your changes.
+3. Submit a pull request with detailed descriptions of your changes.
 
 License
 ---
