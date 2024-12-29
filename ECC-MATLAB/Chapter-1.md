@@ -1,6 +1,18 @@
 # Chapter - 1 
 ## RSA systems
 
+RSA is a widely-used public-key cryptosystem based on the mathematical principle med≡m(modn)med≡m(modn). It has two main applications: secure data encryption and digital signature verification. The security of RSA relies on the difficulty of factoring large integers.
+
+* Encryption: A plaintext message is transformed into ciphertext using a public key (n,e)(n,e), where nn is the product of two large prime numbers, and ee is a public exponent. The ciphertext is computed as c=me(modn)c=me(modn).
+
+* Decryption: Using the private key (n,d)(n,d), the ciphertext can be decrypted to retrieve the plaintext. The decryption process is m=cd(modn)m=cd(modn).
+
+* Signature Generation: To create a digital signature, a hash of the message is computed, and the private key (n,d)(n,d) is used to encrypt the hash. The signature is s=hd(modn)s=hd(modn).
+
+* Signature Verification: The signature is validated using the public key. The hash derived from the signature, h′=se(modn)h′=se(modn), is compared with the hash of the original message. If they match, the signature is valid.
+
+RSA ensures confidentiality through encryption and integrity/authenticity through signatures. Its computational efficiency depends on modular exponentiation and the careful selection of public and private keys.
+
 ```
 Algorithm 1.1 RSA key pair generation
 
