@@ -73,6 +73,16 @@ end
 ```
 
 
+## Steps to Test the Functions in MATLAB
+
+% RSA Parameters
+n = 3233; % Modulus (61 * 53)
+e = 17;   % Public exponent
+d = 2753; % Private exponent
+m = 65;   % Message to encrypt and sign
+
+% Define a simple hash function for testing
+H = @(x) sum(double(num2str(x)));
 
 
 
