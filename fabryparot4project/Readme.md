@@ -1,7 +1,15 @@
+# Fabry-Perot Interferometer Simulation
 
-## Fabry Parot Simulations 
+This repository contains MATLAB scripts demonstrating how to calculate and plot:
+- **Transmitted Intensity** as a function of phase (K)
+- **Finesse** versus Mirror Reflectivity
+- **Contrast Factor** versus Mirror Reflectivity
 
-The code is written long time ago and can use some updates to use loops and cover wide range of options.
+## Getting Started
+
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/yourusername/fabry-perot-simulation.git
 
 
 
